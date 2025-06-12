@@ -4,6 +4,10 @@ import ChatLog from './components/ChatLog';
 import messages from './data/messages.json';
 
 const App = () => {
+  // const likedCounts = () => {
+
+  //   };
+
   return (
     <div id="App">
       <header>
@@ -12,6 +16,7 @@ const App = () => {
       <main>
         {/* Wave 01: Render one ChatEntry component
         Wave 02: Render ChatLog component */}
+        <h2>❤️s</h2>
         <ChatEntry
           sender="Vladimir"
           body="why are you arguing with me"
