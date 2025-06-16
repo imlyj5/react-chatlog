@@ -10,10 +10,10 @@ const ChatEntry = (props) => {
   };
 
   return (
-    <div className="chat-entry local">
+    <div className={`chat-entry ${props.isLocal ? 'local' : 'remote'}`}>
       <h2 className="entry-name">{props.sender}</h2>
       <section className="entry-bubble">
-        <p>{props.body}</p>
+        <p className='message-body'>{props.body}</p>
         <p className="entry-time"><TimeStamp time={props.timeStamp}/></p>
         <button onClick={likeButtonClicked} className="like">{heart}</button>
       </section>
@@ -29,6 +29,7 @@ ChatEntry.propTypes = {
   timeStamp: PropTypes.string.isRequired,
   liked: PropTypes.bool.isRequired,
   onLikeCountChange: PropTypes.func.isRequired,
+  isLocal: PropTypes.bool.isRequired,
 };
 
 export default ChatEntry;

@@ -12,6 +12,7 @@ const ChatLog = (props) => {
         timeStamp={chat.timeStamp}
         liked = {chat.liked}
         onLikeCountChange={props.onLikeCountChange}
+        isLocal={chat.sender === props.local}
       />
     );
   });
@@ -32,6 +33,7 @@ ChatLog.propTypes = {
     liked: PropTypes.bool.isRequired,
   })),
   onLikeCountChange: PropTypes.func.isRequired,
+  local: PropTypes.string.isRequired,
 };
 
 export default ChatLog;
